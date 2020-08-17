@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+                     <!-- Bootstrap -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                       
+                       <!--for empty spaces use container padding-->
+ 
+
+<script>
+
+</script>
+
+
+<style>
+#progress{
+         border-radius: 15px;
+         border: 1px solid white;
+         border-style: groove;
+         background-color: transparent;
+         min-height: 200px;
+         width:310px;
+         margin-right: 10px;
+         box-shadow: 5px 5px 5px 5px grey;
+    }
+        
+   .panel-tabs {
+    position: relative;
+    bottom: 30px;
+    clear:both;
+    border-bottom: 1px solid transparent;
+}
+
+.panel-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.panel-tabs > li > a {
+    margin-right: 2px;
+    margin-top: 4px;
+    line-height: .85;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    color: #FFFFFF;
+}
+
+.panel-tabs > li > a:hover {
+    border-color: transparent;
+    color: #FFFFFF;
+    background-color: transparent;
+}
+
+.panel-primary>.panel-heading {
+    color: #000000;
+    background-color: transparent;
+    border-color: transparent;
+
+}
+
+.panel-primary {
+    border-color: transparent;
+}
+
+.panel-tabs > li.active > a,
+.panel-tabs > li.active > a:hover,
+.panel-tabs > li.active > a:focus {
+    color: #FFFFFF;
+    cursor: default;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255, .23);
+    border-bottom-color: transparent;
+}
+
+.tab-pane{
+    height:300px;
+    overflow-y:scroll;
+}
+
+
+
+
+
+body{
+        padding-top: 100px;
+      }
+
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+p button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #888888;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+div div a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+</style>
+
+
+
+
+  
+<body>
+
+
+
+                       <!--Navbar-->
+                      <!--Navbar-->
+  <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #ffffff";>
+  <div class="container-fluid">
+    <div class="navbar-header" style="font-size: 25px">
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"> About </a></li>
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="search.html"> Flood </a></li>
+            <li><a href="search.html"> Health </a></li>
+            <li><a href="search.html"> Education </a></li>
+          </ul>
+        </li>
+      <li><a href="searchorg.html"> Organizations</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+    </ul>
+     
+    <form class="navbar-form navbar-right">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search by events / Orgs">
+      </div>
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="fa fa-facebook-square" style="font-size: 25px"></span></a></li>
+    </ul>
+
+
+  </div>
+</nav>
+
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+  <img src="images/gal1.jpg" alt="John" style="width:100%">
+  <h1>John Doe</h1>
+  <p class="title">CEO & Founder, Example</p>
+  <p>Harvard University</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+ </div>
+ <p><button>Contact</button></p>
+</div> </div>
+
+
+   <div class="col-md-4 text-center">
+   <p style="padding-top: 50px;"><button>Total Donated</button></p>
+   <h1 >$100</h1>
+   <p style="padding-top: 100px;"><button>Recents</button></p>
+
+
+    <div class="panel panel-primary">
+                     
+            <div class="panel-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="test">
+                        <div class="list">
+            <div class="cities-list">
+            
+            <div class="list-group">
+              
+              <a class="list-group-item" href="#">Donor name
+                <span class="badge">$100</span>
+              </a>
+              
+              <a class="list-group-item" href="#">Donor name
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">Donor name
+                <span class="badge">$200</span>
+              </a>
+              <a class="list-group-item" href="#">Donor name
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">Donor name
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$100</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$200</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$200</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$200</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$200</span>
+              </a>
+              <div class="control-height list-group-item"></div>
+              </div>
+              
+              
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+

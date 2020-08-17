@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+                     <!-- Bootstrap -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+                       <!-- Carousel-->
+      <script>
+           
+      </script>  
+                       <!--for empty spaces use container padding-->
+      <style>
+
+    #progress{
+         border-radius: 15px;
+         border: 1px solid white;
+         border-style: groove;
+         background-color: transparent;
+         min-height: 200px;
+         width:310px;
+         margin-right: 10px;
+         box-shadow: 5px 5px 5px 5px grey;
+    }
+        
+   .panel-tabs {
+    position: relative;
+    bottom: 30px;
+    clear:both;
+    border-bottom: 1px solid transparent;
+}
+
+.panel-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.panel-tabs > li > a {
+    margin-right: 2px;
+    margin-top: 4px;
+    line-height: .85;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    color: #FFFFFF;
+}
+
+.panel-tabs > li > a:hover {
+    border-color: transparent;
+    color: #FFFFFF;
+    background-color: transparent;
+}
+
+.panel-primary>.panel-heading {
+    color: #000000;
+    background-color: transparent;
+    border-color: transparent;
+
+}
+
+.panel-primary {
+    border-color: transparent;
+}
+
+.panel-tabs > li.active > a,
+.panel-tabs > li.active > a:hover,
+.panel-tabs > li.active > a:focus {
+    color: #FFFFFF;
+    cursor: default;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255, .23);
+    border-bottom-color: transparent;
+}
+
+.tab-pane{
+    height:300px;
+    overflow-y:scroll;
+}
+
+
+      body{
+        padding-top: 100px;
+      }
+
+
+       
+       .navbar {
+          color: #000000;
+          background-color: #000000;
+      }
+      .sidebar{
+        margin-bottom: 10px;
+       background-color: #f5f5f5;
+        text-align: center;
+        min-height: 200px;
+        border: 1px solid  #e5e5e5;
+      }
+      #orgname{
+        position: absolute;
+        top: 60px;
+        right:400px;
+        
+      }
+      #time{
+        position: absolute;
+        top: 90px;
+        right: 490px;
+      }
+      
+
+
+   .prettyline {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+
+
+      </style>
+
+
+
+  </head>
+  <body>  
+                       <!--Navbar-->
+                      <!--Navbar-->
+  <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #ffffff";>
+  <div class="container-fluid">
+    <div class="navbar-header" style="font-size: 25px">
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"> About </a></li>
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="search.html"> Flood </a></li>
+            <li><a href="search.html"> Health </a></li>
+            <li><a href="search.html"> Education </a></li>
+          </ul>
+        </li>
+      <li><a href="searchorg.html"> Organizations</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+    </ul>
+     
+    <form class="navbar-form navbar-right">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search by events / Orgs">
+      </div>
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="fa fa-facebook-square" style="font-size: 25px"></span></a></li>
+    </ul>
+
+
+  </div>
+</nav>
+
+
+
+                      
+
+
+
+
+
+
+                                        <!--Summation-->
+
+   <div class="container text-center" >
+
+             
+                   
+
+
+
+      <!--inside the Event sidebar -->
+
+       <div class="sidebar">
+       <div class="row">
+                                  <!--image part-->
+          <div class="col-md-6">
+          <div><a href="/w3images/nature.jpg" target="_blank"> <img src="images/event.jpg" width="100%"> </a></div> </div>
+                                  <!--link part-->
+          <div class="col-md-6">
+
+          <h2 style="padding: 10px;">Synopsis</h2>
+          <p style="padding: 10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.    
+           </p>
+
+
+          <div style="padding: 10px;"><a href="signup/signup.html" class="btn btn-info btn-lg"> Donate </a> </div></div> 
+          
+
+        
+          <div style="padding: 15px;"><a href="signup/signup.html" class="btn btn-default btn-lg"> Share on Social Media </a> </div></div>
+      
+               </div>
+             </div>
+           </div>
+          
+          <!-- Event Name -->
+
+          <div>  
+           <div class="row">
+             <div class="col-md-2">
+               <img src="">
+             </div>
+             <div class="col-md-6">
+               <h1>Event Name</h1>
+               <p>fundraising for </p> 
+               <h4 id="orgname"> <u>Organization Name</u></h4>
+               <p>Event Time </p>
+                <h4 id="time">time range</h4>
+             </div>
+           </div>
+          </div>
+
+    
+           <!--updates recent Donors Scrolling-->
+
+           <div class="container">
+    <div class="row">
+    <div class="col-md-8" style="padding: 100px;">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title"> Recent Donors</h1>
+            </div>            
+            <div class="panel-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="test">
+                        <div class="list">
+            <div class="cities-list">
+            
+            <div class="list-group">
+              <div class="control-height list-group-item"></div>
+              <a class="list-group-item" href="#">Donor name
+                <span class="badge">$100</span>
+              </a>
+              
+              <a class="list-group-item" href="#">Donor name
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">Donor name
+                <span class="badge">$200</span>
+              </a>
+              <a class="list-group-item" href="#">Donor name
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">Donor name
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$100</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$200</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$200</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$200</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$300</span>
+              </a>
+              <a class="list-group-item" href="#">lorem ipsum
+                <span class="badge">$200</span>
+              </a>
+              <div class="control-height list-group-item"></div>
+              </div>
+              
+              
+            
+</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+       <!--Progress Bar-->
+
+
+             
+             <div class="col-md-4 text-center" id="progress">
+               <h3>Animated Progress Bar</h3>
+               <p>The .active class animates the progress bar:</p> 
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%"> 40% </div> 
+             </div>
+
+             <h4 style="text-align:left;"> Goal: $Amount</h4>
+             <h4 style="text-align: right;">Raised: $Amount</h4>
+
+
+
+  </div>
+ </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    </body>
+</html>

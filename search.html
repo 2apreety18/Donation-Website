@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+
+                     <!-- Bootstrap -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+                       <!-- Carousel-->
+      <script>
+
+
+
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+
+
+
+                       <!--for empty spaces use container padding-->
+      <style>
+
+    #myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 30px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 25px; /* Add some space below the input */
+    box-shadow: 2px 2px 2px #888888;
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f6f6f6;
+
+}
+
+ #myUL .row{
+      outline: 2px;
+      background-color: #f6f6f6;
+      border: 1px solid #ddd;
+}
+
+
+      body{
+        padding-top: 100px;
+      }
+
+
+       
+       .navbar {
+          color: #000000;
+          background-color: #000000;
+      }
+      .sidebar{
+        margin-bottom: 10px;
+       background-color: #f6f6f6;
+        text-align: center;
+        min-height: 70px;
+        border: 1px solid  #e5e5e5;
+      }
+      #orgname{
+        position: absolute;
+        top: 60px;
+        right:400px;
+        
+      }
+      #time{
+        position: absolute;
+        top: 90px;
+        right: 490px;
+      }
+      .col-md-8 .btn{
+         position: absolute;
+         right: 100px;
+         top: 70px;
+      }
+
+
+   .prettyline {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+
+
+      </style>
+
+
+
+  </head>
+  <body>  
+                       <!--Navbar-->
+                      <!--Navbar-->
+  <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #ffffff";>
+  <div class="container-fluid">
+    <div class="navbar-header" style="font-size: 25px">
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"> About </a></li>
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="search.html"> Flood </a></li>
+            <li><a href="search.html"> Health </a></li>
+            <li><a href="search.html"> Education </a></li>
+          </ul>
+        </li>
+      <li><a href="searchorg.html"> Organizations</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+    </ul>
+     
+    <form class="navbar-form navbar-right">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search by events / Orgs">
+      </div>
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="fa fa-facebook-square" style="font-size: 25px"></span></a></li>
+    </ul>
+
+
+  </div>
+</nav>
+
+
+
+                   <!--Search Box-->   
+<div class="row">
+
+
+<div class="col-md-2"></div>
+<div class="col-md-2">
+	
+<h4>Search Based On</h4>
+<p>All</p>
+<p>Location</p>
+<p>Keywords</p>
+<p>Categories</p>
+<div class="container">
+  <form>
+    <div class="checkbox">
+      <label><input type="checkbox" value="">Natural Disasters</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="">Health</label>
+    </div>
+    <div class="checkbox disabled">
+      <label><input type="checkbox" value="" disabled>Women and Children</label>
+    </div>
+  </form>
+</div>
+
+
+
+</div>
+
+<div class="col-md-6">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> </div>
+<div class="col-md-2"></div>
+
+
+                    <!-- Filter -->
+
+<div class="row">
+<div class="col-md-4">
+	
+
+
+
+<h3 style="color: grey">NCOs/Events</h3>
+
+
+
+
+</div>
+<div class="col-md-6">
+
+<ul id="myUL">
+  <li><a href="#">
+  	
+  <!--inside the sidebar1-->
+
+
+       <div class="row">
+                                  <!--image part-->
+          <div class="col-md-4">
+          <div style="padding: 15px;"><a href="/w3images/nature.jpg" target="_blank"> <img src="images/sidebar1.jpg" width="100%"> </a></div> </div>
+                                  <!--link part-->
+          <div class="col-md-8">
+
+          <h3>Event Name</h3>
+          <p>Location</p>
+          <div ><a href="signup/signup.html" class="btn btn-info btn-md"> See details </a> </div></div>
+      
+      </div></a></li>
+
+
+  <li><a href="#">
+  	
+           <div class="row">
+                                  <!--image part-->
+          <div class="col-md-4">
+          <div style="padding: 15px;"><a href="/w3images/nature.jpg" target="_blank"> <img src="images/sidebar1.jpg" width="100%"> </a></div> </div>
+                                  <!--link part-->
+          <div class="col-md-8">
+
+          <h3>Event Name</h3>
+          <p>Location</p>
+          <div ><a href="signup/signup.html" class="btn btn-info btn-md"> See details </a> </div></div>
+
+
+
+
+          </a></li>
+
+  <li><a href="#">
+  	<div class="row">
+                                  <!--image part-->
+          <div class="col-md-4">
+          <div style="padding: 15px;"><a href="/w3images/nature.jpg" target="_blank"> <img src="images/eventflood.jpeg" width="100%"> </a></div> </div>
+                                  <!--link part-->
+          <div class="col-md-8">
+
+          <h3>Event Name</h3>
+          <p>Location</p>
+          <div ><a href="signup/signup.html" class="btn btn-info btn-md"> See details </a> </div></div>
+
+
+
+
+  </a></li>
+
+
+
+  <li><a href="#">
+  	<div class="row">
+                                  <!--image part-->
+          <div class="col-md-4">
+          <div style="padding: 15px;"><a href="/w3images/nature.jpg" target="_blank"> <img src="images/sidebar2.jpg" width="100%"> </a></div> </div>
+                                  <!--link part-->
+          <div class="col-md-8">
+
+          <h3>Organization Name</h3>
+          <p>Location</p>
+          <div ><a href="signup/signup.html" class="btn btn-info btn-md"> See details </a> </div></div>
+  </a></li>
+
+  
+  <li><a href="#">Cindy</a></li>
+</ul>
+</div>
+
+<div class="col-md-2"></div>
+
+
+
+</div>
+
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    </body>
+</html>
